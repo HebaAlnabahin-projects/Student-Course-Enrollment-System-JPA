@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EnrollmentController">
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Student Enrollment Management" style="-fx-font-size: 24px; -fx-letter-spacing: 1px;"/>
+
+    <HBox spacing="15" alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 15;">
+        <effect>
+            <DropShadow blurType="GAUSSIAN" height="20" radius="9" width="20">
+                <color>
+                    <Color blue="0.9" green="0.9" red="0.9" />
+                </color>
+            </DropShadow>
+        </effect>
+        <TextField fx:id="studentIdField" promptText="Enter Student ID" prefWidth="120"/>
+        <TextField fx:id="courseIdField" promptText="Enter Course ID" prefWidth="120"/>
+        <DatePicker fx:id="datePicker" promptText="Select Date" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Add Record" onAction="#handleAdd" prefWidth="120"/>
+        <Button text="Update" onAction="#handleUpdate" prefWidth="100" style="-fx-background-color: #10b981;"/>
+        <Button text="Delete" onAction="#handleDelete" prefWidth="100" style="-fx-background-color: #ef4444;"/>
+        <Button text="View All" onAction="#handleView" prefWidth="100" style="-fx-background-color: #64748b;"/>
+    </HBox>
+
+    <TableView fx:id="enrollmentTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colStudentId" text="Student ID" prefWidth="150"/>
+            <TableColumn fx:id="colCourseId" text="Course ID" prefWidth="150"/>
+            <TableColumn fx:id="colDate" text="Enrollment Date" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

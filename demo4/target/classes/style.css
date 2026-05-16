@@ -1,0 +1,65 @@
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label {
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+}
+
+.text-field, .date-picker, .date-picker > .text-field {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 10;
+    -fx-border-none: true;
+    -fx-border-width: 0;
+    -fx-padding: 10;
+    -fx-background-insets: 0;
+}
+
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.button {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 10 25;
+}
+
+.button:hover {
+    -fx-background-color: #4338ca;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8fafc;
+    -fx-text-fill: #64748b;
+    -fx-padding: 12;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #f8fafc;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
